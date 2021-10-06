@@ -1,0 +1,14 @@
+{% extends 'formValidationSession/layout.html' %}
+
+{% block title %}
+    Form, Validation and Sessions
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for task in tasks %}
+            <li> {{task}} </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'formValidationSession:add'%}">Insert Tasks</a>
+{% endblock %}

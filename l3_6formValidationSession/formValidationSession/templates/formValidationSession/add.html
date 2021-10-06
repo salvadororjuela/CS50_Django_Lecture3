@@ -1,0 +1,19 @@
+{% extends 'formValidationSession/layout.html' %}
+
+{% block title %}
+    Add Tasks
+{% endblock %}
+
+{% block body %}
+    <h1>Add Task</h1>
+    <!-- add submit action to the form via method="post" -->
+    <form action="{% url 'formValidationSession:add' %}" method="post">
+        <!-- Avoid cross-site request forgery with csrf_token-->
+        {% csrf_token %}
+        <!--form created in the add view of views.py inside the app directory-->
+        {{ form }}
+        <input type="submit">
+    </form>
+    <br>
+    <a href="{% url 'formValidationSession:index' %}"> View Tasks</a>
+{% endblock %}

@@ -1,0 +1,5 @@
+#inline li{
+  float: left;
+  list-style: none;
+  margin-left: 10px;
+}
